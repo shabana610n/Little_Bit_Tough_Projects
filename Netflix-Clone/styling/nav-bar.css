@@ -1,0 +1,55 @@
+nav {
+    max-width: 80vw;
+    height: 100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-corner #lang{
+    background-color: transparent;
+    padding: 7px 0px 7px 3px;
+
+    color: white;
+    border: solid 1px white;
+
+    margin-right: 0.7rem;
+    cursor: pointer;
+}
+#lang option{
+    background-color: black;
+}
+.right-corner button {
+    background-color: var(--red-color);
+    padding: 7px 15px 7px 15px;
+
+    color: white;
+    border: solid 1px white;
+}
+
+.right-corner button:hover{
+    background-color: var(--hover-redcolor);
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+    nav {
+        max-width: 85vw;
+        height: 90px;
+    }
+
+    .left-corner img{
+        width: 120px;
+    }
+
+    .right-corner #lang{
+        padding: 4px 0px 4px 1px;
+        margin-right: 0.2rem;
+    }
+    .right-corner button {
+        padding: 5px 12px 5px 12px;
+    }
+
+}

@@ -1,0 +1,126 @@
+.hero {
+    height: calc(100% - 20px);  /* 100% means it's occupying 100% height of its parent (main) */
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    gap: 23px;
+    padding: 0 30px;
+
+}
+
+.hero> :nth-child(1) {
+    font-weight: 800;
+    font-size: 3em;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.hero-user-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.hero-user-input #email {
+    background-color: var(--email-bg-color);
+    padding: 13px 100px 13px 13px;
+
+    color: white;
+    font-size: 1.2em;
+
+    border: 1px solid var(--email-border);
+    border-radius: 4px;
+}
+
+.hero-user-input button {
+    background-color: var(--red-color);
+    padding: 10px 15px 12px 15px;
+
+    color: white;
+    font-size: 1.3em;
+
+    border: 1px solid var(--email-border);
+    border-radius: 4px;
+}
+
+.hero-user-input button:hover {
+    background-color: var(--hover-redcolor);
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1440px) {
+
+    nav {
+        max-width: 90vw;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 2.5em;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 1.5em;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 1.2em;
+    }
+
+    .hero-user-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+
+    .hero {
+        height: calc(100% - 100px);  /* 100% means it's occupying 100% height of its parent (main) */
+    }
+    nav {
+        max-width: 90vw;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 2.2em;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 1.3em;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 1em;
+    }
+
+    .hero-user-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+}

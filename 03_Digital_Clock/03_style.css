@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #212121;
+    color: #fff;
+}
+.box{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.aqua-box{
+    font-size: 2em;
+    color: black;
+    
+    background-color: aqua;
+    padding: 50px;
+    border-radius: 20px;
+}

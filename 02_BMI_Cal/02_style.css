@@ -1,0 +1,37 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    margin-left: 20px;
+    font-family: sans-serif;
+}
+.height, .weight, button{
+    margin-bottom: 0.7rem;
+    font-size: 18px;  /* Labeling or outer text */
+}
+#height, #weight, button{
+    font-size: 18px;  /* inner box text */
+    padding: 5px;
+}
+button{
+    background-color: aqua;
+}
+.result{
+    background-color: rgba(239, 15, 15);
+    padding: 7px;
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    display: none;
+}
+p{
+    font-size: 18px;
+}

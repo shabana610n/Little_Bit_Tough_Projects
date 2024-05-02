@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    background-color: salmon;
+
+    margin: 1.5rem;
+    gap: 1rem;
+}
+
+h1,
+#reset-btn,
+#new-btn {
+    padding: 0.5rem 0.7rem;
+    background-color: #222;
+
+    color: #fff;
+
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.btns-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0.5rem;
+}
+
+.btns-div button {
+    width: 120px;
+    height: 120px;
+    background-color: #222;
+
+    color: #fff;
+    font-size: 3rem;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+#reset-btn {
+    font-size: 1rem;
+}
+
+#new-btn, #msg {
+    padding: 0.5rem 0.7rem;
+    background-color: #222;
+    
+    color: #fff;
+    
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.msg-wrapper {
+    display: none;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    gap: 0.7rem;
+}
