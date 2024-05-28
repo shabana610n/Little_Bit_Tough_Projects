@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: sans-serif;
+    gap: 1rem;
+}
+
+#alertMsg {
+    margin-top: 2rem;
+}
+
+.userInput {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.todoItemList .todoItem::first-letter {
+    text-transform: uppercase;
+}
+
+#textInput {
+    padding: 0.7rem;
+    padding-right: 3rem;
+
+    border: none;
+    outline: none;
+
+    font-size: large;
+    color: black;
+}
+
+button {
+    padding: 0.7rem 1rem;
+    font-size: large;
+
+    border: none;
+    outline: none;
+
+    border-radius: 1.5rem;
+
+    background-color: #f5ee62;
+    color: #212121;
+
+    transition: all 0.3s linear;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0.1rem #f5ee62;
+
+    background-color: transparent;
+    color: #f5ee62;
+}
+
+#todoItemContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1rem;
+    margin-left: -6.5rem;
+
+    gap: 1.2rem;
+}
+
+.todoItemList {
+    display: grid;
+    width: 17rem;
+    grid-template-columns: 1fr 0.3fr;
+    align-items: center;
+    justify-content: center;
+}

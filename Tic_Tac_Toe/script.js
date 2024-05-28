@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const btns = document.querySelectorAll('.btns-div button');
 const resetBtn = document.getElementById('reset-btn');
 const newBtn = document.getElementById('new-btn');
@@ -73,10 +74,77 @@ const checkWinner = () => {
                 showWinner(pos1Val);
                 return true;
             }
+=======
+// Select all the button elements for the game board
+const gameButtons = document.querySelectorAll('.btns'); // NodeList (9)
+const buttonsWrapper = document.querySelector('.btns-div');
+const gameTitle = document.querySelector('h1');
+const messageWrapper = document.querySelector('.msg-wrapper');
+const messageText = document.getElementById('msg');
+const newGameButton = document.getElementById('new-btn');
+const resetButton = document.getElementById('reset-btn');
+
+let currentPlayer = 'O'; // Start with player 'O'
+
+// Function to check for a winner or a draw
+const checkWinner = () => {
+    // Horizontal Winning Pattern
+    if (
+        (gameButtons[0].innerHTML === 'X' && gameButtons[1].innerHTML === 'X' && gameButtons[2].innerHTML === 'X') ||
+        (gameButtons[3].innerHTML === 'X' && gameButtons[4].innerHTML === 'X' && gameButtons[5].innerHTML === 'X') ||
+        (gameButtons[6].innerHTML === 'X' && gameButtons[7].innerHTML === 'X' && gameButtons[8].innerHTML === 'X') ||
+        (gameButtons[0].innerHTML === 'O' && gameButtons[1].innerHTML === 'O' && gameButtons[2].innerHTML === 'O') ||
+        (gameButtons[3].innerHTML === 'O' && gameButtons[4].innerHTML === 'O' && gameButtons[5].innerHTML === 'O') ||
+        (gameButtons[6].innerHTML === 'O' && gameButtons[7].innerHTML === 'O' && gameButtons[8].innerHTML === 'O')
+    ) {
+        messageWrapper.style.display = 'block';
+        messageText.innerText = `${currentPlayer} is the Winner`;
+        gameTitle.style.display = 'none';
+        buttonsWrapper.style.display = 'none';
+        resetButton.style.display = 'none';
+    }
+    // Vertical Winning Pattern
+    else if (
+        (gameButtons[0].innerHTML === 'X' && gameButtons[3].innerHTML === 'X' && gameButtons[6].innerHTML === 'X') ||
+        (gameButtons[1].innerHTML === 'X' && gameButtons[4].innerHTML === 'X' && gameButtons[7].innerHTML === 'X') ||
+        (gameButtons[2].innerHTML === 'X' && gameButtons[5].innerHTML === 'X' && gameButtons[8].innerHTML === 'X') ||
+        (gameButtons[0].innerHTML === 'O' && gameButtons[3].innerHTML === 'O' && gameButtons[6].innerHTML === 'O') ||
+        (gameButtons[1].innerHTML === 'O' && gameButtons[4].innerHTML === 'O' && gameButtons[7].innerHTML === 'O') ||
+        (gameButtons[2].innerHTML === 'O' && gameButtons[5].innerHTML === 'O' && gameButtons[8].innerHTML === 'O')
+    ) {
+        messageWrapper.style.display = 'block';
+        messageText.innerText = `${currentPlayer} is the Winner`;
+        gameTitle.style.display = 'none';
+        buttonsWrapper.style.display = 'none';
+        resetButton.style.display = 'none';
+    }
+    // Diagonal Winning Pattern
+    else if (
+        (gameButtons[0].innerHTML === 'X' && gameButtons[4].innerHTML === 'X' && gameButtons[8].innerHTML === 'X') ||
+        (gameButtons[2].innerHTML === 'X' && gameButtons[4].innerHTML === 'X' && gameButtons[6].innerHTML === 'X') ||
+        (gameButtons[0].innerHTML === 'O' && gameButtons[4].innerHTML === 'O' && gameButtons[8].innerHTML === 'O') ||
+        (gameButtons[2].innerHTML === 'O' && gameButtons[4].innerHTML === 'O' && gameButtons[6].innerHTML === 'O')
+    ) {
+        messageWrapper.style.display = 'block';
+        messageText.innerText = `${currentPlayer} is the Winner`;
+        gameTitle.style.display = 'none';
+        buttonsWrapper.style.display = 'none';
+        resetButton.style.display = 'none';
+    }
+    else {
+        // Check for a draw
+        if ([...gameButtons].every(btn => btn.innerText !== '')) {
+            messageWrapper.style.display = 'block';
+            messageText.innerText = 'Game is Draw!';
+            gameTitle.style.display = 'none';
+            buttonsWrapper.style.display = 'none';
+            resetButton.style.display = 'none';
+>>>>>>> a0e82a3 (Added some more tough projects of JS)
         }
     }
 };
 
+<<<<<<< HEAD
 const enableBtns = () => {
     for (const btn of btns) {
         btn.disabled = false
@@ -93,3 +161,40 @@ const resetGame = () => {
 
 newBtn.addEventListener('click', resetGame)
 resetBtn.addEventListener('click', resetGame)
+=======
+// Function to handle button clicks
+const handleClick = (button) => {
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Switch player
+    if (button.innerText === '') {
+        button.innerText = currentPlayer;
+
+        // Add event listeners for new game and reset buttons
+        newGameButton.addEventListener('click', () => {
+            button.innerText = '';
+            button.removeAttribute('disabled');
+            messageWrapper.style.display = 'none';
+            gameTitle.style.display = 'block';
+            buttonsWrapper.style.display = 'grid';
+            resetButton.style.display = 'block';
+        });
+        resetButton.addEventListener('click', () => {
+            button.innerText = '';
+            button.removeAttribute('disabled');
+            messageWrapper.style.display = 'none';
+            gameTitle.style.display = 'block';
+            buttonsWrapper.style.display = 'grid';
+            resetButton.style.display = 'block';
+        });
+    } else {
+        button.disabled = true;
+    }
+    checkWinner(); // Check for winner after each move
+};
+
+// Add event listeners to each game button
+gameButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        handleClick(button);
+    });
+});
+>>>>>>> a0e82a3 (Added some more tough projects of JS)

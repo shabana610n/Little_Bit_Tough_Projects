@@ -18,6 +18,13 @@ body {
     gap: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+h1 {
+    margin-top: 3rem;
+}
+
+>>>>>>> a0e82a3 (Added some more tough projects of JS)
 h1,
 #reset-btn,
 #new-btn {
@@ -40,7 +47,11 @@ h1,
 .btns-div button {
     width: 120px;
     height: 120px;
+<<<<<<< HEAD
     background-color: #222;
+=======
+    background-color: #222222;
+>>>>>>> a0e82a3 (Added some more tough projects of JS)
 
     color: #fff;
     font-size: 3rem;
@@ -55,24 +66,65 @@ h1,
     font-size: 1rem;
 }
 
+<<<<<<< HEAD
 #new-btn, #msg {
     padding: 0.5rem 0.7rem;
     background-color: #222;
     
     color: #fff;
     
+=======
+#new-btn,
+#msg {
+    padding: 0.5rem 0.7rem;
+    background-color: #222222;
+
+    text-align: center;
+    font-size: large;
+    color: #fff;
+
+>>>>>>> a0e82a3 (Added some more tough projects of JS)
     border: none;
     border-radius: 0.3rem;
 }
 
+<<<<<<< HEAD
 .msg-wrapper {
+=======
+#new-btn {
+    margin-left: 2.7rem;
+}
+
+#msg {
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+
+.msg-wrapper {
+    height: 50vh;
+    margin-top: 14rem;
+
+>>>>>>> a0e82a3 (Added some more tough projects of JS)
     display: none;
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
+<<<<<<< HEAD
     height: 100vh;
 
     gap: 0.7rem;
+=======
+}
+
+button:hover {
+    background-color: #151515;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    background-color: #151515;
+    cursor: pointer;
+>>>>>>> a0e82a3 (Added some more tough projects of JS)
 }
